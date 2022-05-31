@@ -48,10 +48,10 @@ void    GameLoop::ft_roll_game()
     timer_pacman = new QTimer();
     timer_inky = new QTimer();
     QObject::connect(timer_pacman, SIGNAL(timeout()), pacman, SLOT(ft_move()));
-    QObject::connect(timer_inky, SIGNAL(timeout()), inky, SLOT(ft_move_ghost()));
-    QObject::connect(timer_clyde, SIGNAL(timeout()), clyde, SLOT(ft_move_ghost()));
+    //QObject::connect(timer_inky, SIGNAL(timeout()), inky, SLOT(ft_move_ghost()));
+    //QObject::connect(timer_clyde, SIGNAL(timeout()), clyde, SLOT(ft_move_ghost()));
     QObject::connect(timer_blinky, SIGNAL(timeout()), blinky, SLOT(ft_move_ghost()));
-    QObject::connect(timer_pinky, SIGNAL(timeout()), pinky, SLOT(ft_move_ghost()));
+    //QObject::connect(timer_pinky, SIGNAL(timeout()), pinky, SLOT(ft_move_ghost()));
     timer_pacman->start(300);
     timer_inky->start(400);
     timer_clyde->start(400);
@@ -154,3 +154,4 @@ GameLoop::GameLoop(char *file_name)
     clyde->ft_set_friends(blinky, pinky, inky);
     inky->ft_set_friends(blinky, pinky, clyde);
 }
+

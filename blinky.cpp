@@ -112,8 +112,8 @@ void        Blinky::ft_find_pacman()
     map_path[i_pos][j_pos] = d;
     if (ft_check_intersect())
     {
-        ft_clear_map();
-        return ;
+        scene->removeItem(this);
+        return;
     }
     ft_find_path();
     if (ft_set_direction_near())

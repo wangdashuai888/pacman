@@ -39,6 +39,10 @@ private:
     QTimer                                  *timer_pinky;
     QTimer                                  *timer_clyde;
     QTimer                                  *timer_inky;
+    QList <Inky*>   inkiesList;
+    QList <Clyde*>   clydesList;
+    QList <Pinky*>  pinkiesList;
+    QList <Blinky*> blinkiesList;
 public:
                                             GameLoop(char *file_name);
                                             ~GameLoop();
@@ -46,6 +50,7 @@ public:
     void                                    ft_roll_game();
     void                                    ft_create_map();
     int                                     ft_check_file_inp(std::string str);
+    void    ft_multGhost();
 };
 
 #endif // GAMECLASS_H

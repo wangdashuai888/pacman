@@ -12,6 +12,7 @@
 #include <QGraphicsScene>
 #include <QGraphicsPixmapItem>
 #include <unistd.h>
+#include <iostream>
 
 class   PacMan : public QObject, public QGraphicsPixmapItem
 {

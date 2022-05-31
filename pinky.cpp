@@ -88,8 +88,11 @@ void        Pinky::ft_find_pacman()
         }
     }
     map_path[i_pos][j_pos] = d;
-    if (ft_check_intersect())
-        return ;
+    if (ft_check_intersect()) {
+        scene->removeItem(this);
+        return;
+
+    }
     ft_find_path();
     if (ft_set_direction_near())
     {

@@ -74,8 +74,12 @@ int        Ghost::ft_check_intersect()
             && !pacman->ft_scared_state())
     {
         ft_clear_map();
-        pacman->ft_set_defaut();
-        pacman->ft_set_lives();
+        //pacman->ft_set_defaut();
+        //pacman->ft_set_lives();
+        i_pos = 8;
+        j_pos = 9;
+        this->setPos(j_pos * 32, i_pos * 32);
+        pacman->ft_incr_score();
         return (1);
     }
     if (i_pos == pacman->ft_get_pacman_i() && j_pos == pacman->ft_get_pacman_j()

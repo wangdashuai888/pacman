@@ -53,10 +53,10 @@ void    GameLoop::ft_roll_game()
     QObject::connect(timer_blinky, SIGNAL(timeout()), blinky, SLOT(ft_move_ghost()));
     QObject::connect(timer_pinky, SIGNAL(timeout()), pinky, SLOT(ft_move_ghost()));
     timer_pacman->start(300);
-    timer_inky->start(400);
-    timer_clyde->start(400);
-    timer_blinky->start(400);
-    timer_pinky->start(400);
+    timer_inky->start(40);
+    timer_clyde->start(40);
+    timer_blinky->start(40);
+    timer_pinky->start(40);
 }
 
 void    GameLoop::ft_create_map()

@@ -121,6 +121,8 @@ void        Blinky::ft_find_pacman()
         if (ft_check_intersect())
         {
             ft_clear_map();
+            std::cout << "find";
+            scene->removeItem(this);
             return ;
         }
     }
